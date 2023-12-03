@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;   
+}
+
+:root{
+    --text-color:#000000;
+    --main-color:#1B6B93;
+    --second-color:#fcf9f4;
+    --span-color:#4FC0D0;
+} 
+section{
+    padding: 50px 10%;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 100px;
+    background: var(--main-color);
+}
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:var(--second-color);
+}
+
+.logo span{
+    color: var(--span-color);
+}
+.navbar{
+    position: relative;
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight:500 ;
+    color: var(--second-color);
+}
+.navbar a:hover{
+    color: #FFFADD;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+.navbar ul li::after{
+    content:"";
+    background:#001C30;
+    width: 100%;
+    height:100%;
+    border-radius: 35px;
+    position: absolute;
+    top: 100%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s,opacity 0.5s;
+}
+.navbar ul li:hover{
+    color: #fff;
+}
+.navbar ul li:hover::after{
+    top:50%;
+    opacity:1;
+}
+.home {
+    width: 100%;
+    min-height:100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.80),rgba(0,0,0,0.80)),url(images/background.jpg);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+    display: flex;
+    align-items:center ;  
+}
+.home-text span{
+    color:#8ECDDD;
+}
+.home-text h1{
+    font-size: 3rem;
+    color: #fff8e7;
+}
+.home-text p{
+    font-size: 0.938rem;
+    margin: 0.4rem 0 1.8rem;
+    color: var(--second-color);   
+}
+.button{
+    padding: 10px 14px;
+    background:var(--main-color);
+    color: #fff;
+    border-radius: 0.3rem;
+    font-size: 14px;    
+}
+.button:hover{
+    background:#005d5e;
+}
+body{
+    background-color:var(--span-color);
+    
+    
+}
+.recipecatalog h2{
+    justify-content: center;
+    padding-bottom: 1rem;
+    font-size:2rem;
+}
+.shop p{
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.recipecatalog p{
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.heading{
+    text-align: center;
+    
+}
+
+.shop-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding:0;
+    gap: 1rem;
+    
+}
+
+.container{
+     display: flex;   
+     justify-content: center;
+     gap: 4rem;
+}
+
+.card{
+    background: white;
+    width: 300px;
+    height:35rem;
+    margin: 5px;
+    border-radius: 15px;
+    text-align: center;
+
+}
+.card:hover{
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0,0,0 ,0.5);
+}
+.card-img{
+    background-color: aqua;
+    min-height:18rem;
+    max-height: 15rem;
+    max-width: 100%;
+    margin-bottom:15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0 ;
+}
+.thai-1{
+background-image: url(images/thai1.jpg);
+}
+
+.thai-2{
+    background-image: url(images/thai2.jpg);
+}
+.thai-3{
+    background-image: url(images/thai3.jpg);
+    }
+
+.thai-4{
+background-image: url(images/thai4.jpg);
+}
+
+.thai-5{
+    background-image: url(images/thai5.jpg);
+}
+.thai-6{
+    background-image: url(images/thai6.jpg);
+}
+.card-header{
+padding:10px;
+margin: 5px;
+}
+.card-text{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    padding: 10px;
+    margin: 5px;
+    
+}
+
+.card-button{
+    display: block;
+    width:90%;
+    margin: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fcf9f4 ;
+    background-color: #005d5e;
+    border:none;
+    border-radius: 0.4rem;
+    transition: o.2s;
+    cursor:pointer;
+    letter-spacing: 0.1rem;  
+}
+.card-button span{
+    margin-left: 8px;
+    transition: 0.2s;
+}
+.card-button:hover,
+.card-button:active{
+    background-color:#019c9e;
+ }
+.card-button:hover span,
+.card-button:active span{
+    margin-left: 20px;
+}
+footer{
+    background: #343434;
+    padding-top:50px ;
+    color:#ffffff;
+}
+.footer-container{
+    width:1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-content{
+    width:33.3%;
+}
+h3{
+    font-size: 28px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+.footer-content p{
+    width:200px;
+    margin: auto;
+    padding:5px;
+    align-items:center;
+}
+.contact{
+    padding: 10px;
+}
+    .footer-content ul{
+        text-align: center;
+        color: #ffffff;
+    }
+    .list{
+        padding: 0;
+    }
+    .list li{
+        width:auto;
+        text-align: center;
+        list-style-type:none;
+        padding:7px;
+        position: relative;
+        color: #ffffff;
+    }
+    .footer-list a{
+        color: #ffffff;
+    }
+    .list li::before{
+        content:'';
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height:2px;
+        background-color: antiquewhite;
+        transition-duration: .5s;  
+    }
+    .list li:hover::before{
+        width:70px;
+    }
+    .social-icons{
+        text-align: center;
+        padding:0;
+    }
+    .social-icons li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+    .social-icons i{
+        color: #fff;
+        font-size: 25px; 
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: antiquewhite;
+    }
+    .social-icons i:hover{
+        color:antiquewhite;
+    }
+    .bottom-bar{
+        background:#FFCC70;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .bottom-bar p{
+        color: var(--text-color);
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+
+    }
